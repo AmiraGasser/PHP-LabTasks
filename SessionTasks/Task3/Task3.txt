@@ -1,0 +1,4 @@
+create table Employees (
+id varchar(50) primary key,
+name varchar(50)
+)
