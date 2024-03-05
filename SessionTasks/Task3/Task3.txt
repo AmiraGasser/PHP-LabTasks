@@ -1,4 +1,66 @@
-create table Employees (
-id varchar(50) primary key,
-name varchar(50)
+--teachers
+CREATE TABLE teachers(
+id int(10) AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(40) NOT NULL,
+phone VARCHAR(20) UNIQUE ,
+email VARCHAR(255) UNIQUE NOT NULL,
+salary FLOAT(10,1) unsigned NOT NULL,
+age INT(1) NOT NULL ,
+password VARCHAR(255),
+gender ENUM('male','female','NULL') DEFAULT('NULL')
+
+)
+-- admin
+CREATE TABLE admin(
+id int(10) AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(40) NOT NULL,
+phone VARCHAR(20) UNIQUE ,
+email VARCHAR(255) UNIQUE NOT NULL,
+salary FLOAT(10,1) unsigned NOT NULL,
+age INT(1) NOT NULL ,
+password VARCHAR(255),
+gender ENUM('male','female','NULL') DEFAULT('NULL')
+
+)
+-- students
+CREATE TABLE students(
+id int(10) AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(40) NOT NULL,
+phone VARCHAR(20) UNIQUE ,
+email VARCHAR(255) UNIQUE NOT NULL,
+birth_Date DATE NOT NULL ,
+password VARCHAR(255),
+gender ENUM('male','female','NULL') DEFAULT('NULL'),
+level ENUM('LEVEL 1' , 'LEVEL 2', 'LEVEL 3', 'LEVEL 4')
+
+)
+-- mangers
+CREATE TABLE mangers(
+id int(10) AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(40) NOT NULL,
+phone VARCHAR(20) UNIQUE ,
+email VARCHAR(255) UNIQUE NOT NULL,
+salary FLOAT(10,1) unsigned NOT NULL,
+age INT(1) NOT NULL ,
+password VARCHAR(255),
+gender ENUM('male','female','NULL') DEFAULT('NULL')
+
+)
+-- parents
+CREATE TABLE parents(
+name VARCHAR(40) NOT NULL,
+phone VARCHAR(20) UNIQUE ,
+email VARCHAR(255) UNIQUE NOT NULL,
+gender ENUM('male','female','NULL') DEFAULT('NULL')
+
+)
+-- classes
+CREATE TABLE classes(
+id int(10) AUTO_INCREMENT PRIMARY KEY,
+location VARCHAR(40) NOT NULL
+)
+-- subjects
+CREATE TABLE subjects(
+id int(10) AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(40) NOT NULL
 )
